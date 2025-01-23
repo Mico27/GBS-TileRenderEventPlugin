@@ -1,0 +1,16 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "CoinFlags",
+      "symbol": "var_coinflags"
+    },
+    {
+      "id": "1",
+      "name": "LastRenderedColumnX",
+      "symbol": "var_lastrenderedcolumnx"
+    }
+  ],
+  "constants": []
+}

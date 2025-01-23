@@ -1,0 +1,86 @@
+{
+  "_resourceType": "trigger",
+  "id": "b9f332c3-8aa1-4676-8c0c-9fd5f4b56289",
+  "name": "Coin1Trigger",
+  "prefabId": "",
+  "x": 24,
+  "y": 11,
+  "symbol": "trigger_2",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "0",
+        "flag": 9,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "0",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": true,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "126ab5a7-7a3f-46d5-8d18-8000667b5c4c"
+          },
+          {
+            "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+            "args": {
+              "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+              "source_x": {
+                "type": "number",
+                "value": 0
+              },
+              "source_y": {
+                "type": "number",
+                "value": 0
+              },
+              "dest_x": {
+                "type": "number",
+                "value": 24
+              },
+              "dest_y": {
+                "type": "number",
+                "value": 11
+              },
+              "w": {
+                "type": "number",
+                "value": 2
+              },
+              "h": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": false
+            },
+            "id": "74865735-b259-471d-886d-b20e95b06079"
+          }
+        ]
+      },
+      "id": "f17e38ee-d8e6-40a7-9e65-76cf336be9dd"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 2
+}

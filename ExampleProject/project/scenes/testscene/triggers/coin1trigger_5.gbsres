@@ -1,0 +1,86 @@
+{
+  "_resourceType": "trigger",
+  "id": "3ba9e72b-e2a3-4699-a216-e85c9c752db8",
+  "name": "Coin1Trigger",
+  "prefabId": "",
+  "x": 45,
+  "y": 12,
+  "symbol": "trigger_4",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "0",
+        "flag": 13,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "0",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": true,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "7b1d8dbe-4427-4701-95b7-ea210b6e7470"
+          },
+          {
+            "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+            "args": {
+              "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+              "source_x": {
+                "type": "number",
+                "value": 0
+              },
+              "source_y": {
+                "type": "number",
+                "value": 0
+              },
+              "dest_x": {
+                "type": "number",
+                "value": 45
+              },
+              "dest_y": {
+                "type": "number",
+                "value": 12
+              },
+              "w": {
+                "type": "number",
+                "value": 2
+              },
+              "h": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": true
+            },
+            "id": "ae58d4b2-0a46-4216-90a3-380c0716e087"
+          }
+        ]
+      },
+      "id": "7463a81e-b49b-4425-a2bb-610fd6ef9e6c"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 4
+}

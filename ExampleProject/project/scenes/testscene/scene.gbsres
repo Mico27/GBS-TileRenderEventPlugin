@@ -1,0 +1,612 @@
+{
+  "_resourceType": "scene",
+  "id": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+  "_index": 0,
+  "name": "TestScene",
+  "backgroundId": "ab0c1cfc-423e-440b-aa03-b1e7811e57fa",
+  "tilesetId": "b8d4db9d-48df-4762-a165-69b0968d6f2d",
+  "width": 60,
+  "height": 18,
+  "type": "PLATFORM",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "0031c+0f!00d+0f2+0011+0f2+0018+0f3+005+0f!006+0f2+007+0f2+008+0f2+0017+0f5+003+0f3+005+0f2+007+0f2+008+0f2+009+0f78+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_1",
+  "x": 426,
+  "y": 297,
+  "script": [
+    {
+      "command": "MICO_EVENT_RENDER_SCRIPT",
+      "args": {
+        "render_event": "0",
+        "__scriptTabs": "scriptinput"
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "VM_GET_UINT8 VAR_LASTRENDEREDCOLUMNX, _pending_h_x",
+              "references": [
+                {
+                  "type": "variable",
+                  "id": "1"
+                }
+              ],
+              "__collapse": false
+            },
+            "id": "9d2b9bf3-b2bb-44d7-b44b-36155bbcd37f"
+          },
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "1",
+              "choices": 10,
+              "__collapseCase0": false,
+              "__collapseCase1": false,
+              "__collapseCase2": false,
+              "__collapseCase3": false,
+              "__collapseCase4": false,
+              "__collapseCase5": false,
+              "__collapseCase6": false,
+              "__collapseCase7": false,
+              "__collapseCase8": false,
+              "__collapseCase9": false,
+              "__collapseCase10": false,
+              "__collapseCase11": false,
+              "__collapseCase12": false,
+              "__collapseCase13": false,
+              "__collapseCase14": false,
+              "__collapseCase15": false,
+              "__collapseElse": false,
+              "value0": {
+                "type": "number",
+                "value": 4
+              },
+              "__collapse": false,
+              "value1": {
+                "type": "number",
+                "value": 5
+              },
+              "value2": {
+                "type": "number",
+                "value": 15
+              },
+              "value3": {
+                "type": "number",
+                "value": 16
+              },
+              "value4": {
+                "type": "number",
+                "value": 24
+              },
+              "value5": {
+                "type": "number",
+                "value": 25
+              },
+              "value6": {
+                "type": "number",
+                "value": 34
+              },
+              "value7": {
+                "type": "number",
+                "value": 35
+              },
+              "value8": {
+                "type": "number",
+                "value": 45
+              },
+              "value9": {
+                "type": "number",
+                "value": 46
+              }
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 0,
+                    "__collapseElse": true,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        },
+                        "id": "9caea5ad-1063-42ba-a58a-304a2481d575"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "b847515d-f8ae-455b-8140-e05e83e771a0"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 0,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        },
+                        "id": "265065eb-88d3-46d0-8e72-15532f41e466"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "9852bcb2-87b1-4053-9cb6-827d766b8e89"
+                }
+              ],
+              "true2": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 4,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": true
+                        },
+                        "id": "7121243d-444a-474f-a7d8-c0dc280923f0"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "26369cee-770a-43cf-b308-294f09a038eb"
+                }
+              ],
+              "true3": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 4,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 16
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": true
+                        },
+                        "id": "f9892aac-c5c9-4c2f-b4ed-b703250bd32b"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "b539835b-a35b-46a0-bc59-1af6c10255d3"
+                }
+              ],
+              "true4": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 9,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 24
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": false
+                        },
+                        "id": "3cd25f97-8d32-42e1-a433-31791d112586"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "2b312b41-951e-43ba-99a5-0ca5fbd5673d"
+                }
+              ],
+              "true5": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 9,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 25
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": true
+                        },
+                        "id": "77a18213-5b21-4b09-a8c2-2650da7c1cb9"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "edd9ed8f-812e-46c3-a252-158557a1d574"
+                }
+              ],
+              "true6": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 11,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 34
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": true
+                        },
+                        "id": "53d7a106-ecfa-451a-9de3-de45b5f02d71"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "c8af3214-2a7e-458c-bc3b-77c4889d7b1b"
+                }
+              ],
+              "true7": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 11,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 35
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": true
+                        },
+                        "id": "1fb72313-c146-4cd9-a4f1-b43e1d2dc017"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "4c01d7e5-e10e-409c-aa94-44ae9d92fe29"
+                }
+              ],
+              "true8": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 13,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 45
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": false
+                        },
+                        "id": "03ba3cea-172f-42d9-b062-bae76890176f"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "948219c0-29e4-420d-841f-4fb0f61954a8"
+                }
+              ],
+              "true9": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "0",
+                    "flag": 13,
+                    "__collapseElse": true,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COPY_BKG_SUBMAP_TO_BKG",
+                        "args": {
+                          "sceneId": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
+                          "source_x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "source_y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "dest_x": {
+                            "type": "number",
+                            "value": 46
+                          },
+                          "dest_y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "w": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "h": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": true
+                        },
+                        "id": "08700fa4-a6ad-4804-bf7e-22909f76661c"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "58a610d8-8d74-4093-9599-ff2584bb3585"
+                }
+              ],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": []
+            },
+            "id": "c921a5d5-bf76-495b-8e49-dd00b696a28b"
+          }
+        ]
+      },
+      "id": "fee2844c-4499-4d88-8232-65802759484e"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}
