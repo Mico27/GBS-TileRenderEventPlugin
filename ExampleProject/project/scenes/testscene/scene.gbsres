@@ -2,19 +2,19 @@
   "_resourceType": "scene",
   "id": "6b9bf831-9c5b-4723-95d9-973efa5e8a79",
   "_index": 0,
-  "name": "TestScene",
-  "backgroundId": "ab0c1cfc-423e-440b-aa03-b1e7811e57fa",
-  "tilesetId": "b8d4db9d-48df-4762-a165-69b0968d6f2d",
-  "width": 60,
-  "height": 18,
   "type": "PLATFORM",
-  "paletteIds": [],
-  "spritePaletteIds": [],
-  "collisions": "0031c+0f!00d+0f2+0011+0f2+0018+0f3+005+0f!006+0f2+007+0f2+008+0f2+0017+0f5+003+0f3+005+0f2+007+0f2+008+0f2+009+0f78+",
-  "autoFadeSpeed": 1,
+  "name": "TestScene",
   "symbol": "scene_1",
   "x": 426,
   "y": 297,
+  "width": 60,
+  "height": 18,
+  "backgroundId": "ab0c1cfc-423e-440b-aa03-b1e7811e57fa",
+  "tilesetId": "b8d4db9d-48df-4762-a165-69b0968d6f2d",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
   "script": [
     {
       "command": "MICO_EVENT_RENDER_SCRIPT",
@@ -608,5 +608,6 @@
   ],
   "playerHit1Script": [],
   "playerHit2Script": [],
-  "playerHit3Script": []
+  "playerHit3Script": [],
+  "collisions": "0031c+0f!00d+0f2+0011+0f2+0018+0f3+005+0f!006+0f2+007+0f2+008+0f2+0017+0f5+003+0f3+005+0f2+007+0f2+008+0f2+009+0f78+"
 }
