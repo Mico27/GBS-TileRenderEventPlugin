@@ -15,7 +15,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "MetaTilePlugin_ScreenScrollPlugin"
+      "use": "M_Scr"
     },
     {
       "when": {
@@ -24,7 +24,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "MetaTilePlugin_ScreenScrollPlugin"
+      "use": "M_Scr"
     },
     {
       "when": {
@@ -32,7 +32,7 @@
           "Mico27/MetaTilePlugin"
         ]
       },
-      "use": "MetaTilePlugin"
+      "use": "M"
     },
     {
       "when": {
@@ -40,7 +40,7 @@
           "MetaTilePlugin"
         ]
       },
-      "use": "MetaTilePlugin"
+      "use": "M"
     },
     {
       "when": {
@@ -48,7 +48,7 @@
           "Mico27/ScreenScrollPlugin"
         ]
       },
-      "use": "ScreenScrollPlugin"
+      "use": "Scr"
     },
     {
       "when": {
@@ -56,7 +56,7 @@
           "ScreenScrollPlugin"
         ]
       },
-      "use": "ScreenScrollPlugin"
+      "use": "Scr"
     }
   ]
 }
