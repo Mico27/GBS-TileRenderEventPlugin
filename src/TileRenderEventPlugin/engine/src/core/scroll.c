@@ -91,7 +91,7 @@ void scroll_reset(void) BANKED {
     scroll_x        = 0x7FFF;
     scroll_y        = 0x7FFF;
 
-    game_time       = 0; // was in scroll_render_rows() - that is insane, here is not the best place either 
+    game_time       = 0; // was in scroll_render_rows() - that is insane, here is not the best place either
 }
 
 void scroll_update(void) BANKED {
@@ -139,7 +139,7 @@ UBYTE scroll_viewport(parallax_row_t * port) {
             shift_scroll_x = draw_scroll_x >> port->shift;
         }
 
-        port->shadow_scx = shift_scroll_x;        
+        port->shadow_scx = shift_scroll_x;
         UBYTE shift_col = PX_TO_TILE(shift_scroll_x);
 
         // If column is +/- 1 just render next column
@@ -147,18 +147,18 @@ UBYTE scroll_viewport(parallax_row_t * port) {
             // Render right column
             UBYTE x = shift_col - SCREEN_PAD_LEFT + SCREEN_TILE_REFRES_W - 1;
             scroll_load_col(x, port->start_tile, port->tile_height);
-			scroll_callback_execute(0);
+            scroll_callback_execute(0);
         } else if (current_col == new_col + 1) {
             // Render left column
             UBYTE x = MAX(0, shift_col - SCREEN_PAD_LEFT);
             scroll_load_col(x, port->start_tile, port->tile_height);
-			scroll_callback_execute(0);
+            scroll_callback_execute(0);
         } else if (current_col != new_col) {
             // If column differs by more than 1 render entire viewport
             scroll_render_rows(shift_scroll_x, 0, port->start_tile, port->tile_height);
-			scroll_callback_execute(2);
-        }  
-        return FALSE;   
+            scroll_callback_execute(2);
+        }
+        return FALSE;
     } else {
         // last parallax slice OR no parallax
         port->shadow_scx = draw_scroll_x;
@@ -181,11 +181,11 @@ UBYTE scroll_viewport(parallax_row_t * port) {
         } else if (current_col != new_col) {
             // If column differs by more than 1 render entire screen
             scroll_render_rows(draw_scroll_x, draw_scroll_y, ((scene_LCD_type == LCD_parallax) ? port->start_tile : -SCREEN_PAD_TOP), SCREEN_TILE_REFRES_H);
-			scroll_callback_execute(2);
+            scroll_callback_execute(2);
             return TRUE;
         } else if (pending_h_i) {
             scroll_load_pending_col();
-			scroll_callback_execute(0);
+            scroll_callback_execute(0);
         }
 
         // If row is +/- 1 just render next row
@@ -204,11 +204,11 @@ UBYTE scroll_viewport(parallax_row_t * port) {
         } else if (current_row != new_row) {
             // If row differs by more than 1 render entire screen
             scroll_render_rows(draw_scroll_x, draw_scroll_y, ((scene_LCD_type == LCD_parallax) ? port->start_tile : -SCREEN_PAD_TOP), SCREEN_TILE_REFRES_H);
-			scroll_callback_execute(2);
+            scroll_callback_execute(2);
             return TRUE;
         } else if (pending_w_i) {
             scroll_load_pending_row();
-			scroll_callback_execute(1);
+            scroll_callback_execute(1);
         }
 
         return TRUE;
@@ -231,15 +231,15 @@ void scroll_render_rows(INT16 scroll_x, INT16 scroll_y, BYTE row_offset, BYTE n_
     for (BYTE i = 0; i != n_rows && y != image_tile_height; ++i, y++) {
         scroll_load_row(x, y);
         activate_actors_in_row(x, y);
-    }	
+    }
 }
 
 void scroll_queue_row(UBYTE x, UBYTE y) {
     while (pending_w_i) {
         // If previous row wasn't fully rendered
-        // render it now before starting next row        
+        // render it now before starting next row
         scroll_load_pending_row();
-		scroll_callback_execute(1);
+        scroll_callback_execute(1);
     }
 
     // Don't queue rows past image height
@@ -257,7 +257,7 @@ void scroll_queue_col(UBYTE x, UBYTE y) {
         // If previous column wasn't fully rendered
         // render it now before starting next column
         scroll_load_pending_col();
-		scroll_callback_execute(0);
+        scroll_callback_execute(0);
     }
 
     pending_h_x = x;
@@ -284,7 +284,6 @@ void scroll_load_pending_row(void) NONBANKED {
 
     pending_w_x += width;
     pending_w_i -= width;
-	
 
     SWITCH_ROM(_save_bank);
 }
@@ -310,7 +309,7 @@ void scroll_load_row(UBYTE x, UBYTE y) NONBANKED {
 
 void scroll_load_col(UBYTE x, UBYTE y, UBYTE height) NONBANKED {
     _save_bank = CURRENT_BANK;
- 
+
 #ifdef CGB
     if (_is_CGB) {  // Color Column Load
         SWITCH_ROM(image_attr_bank);
@@ -346,5 +345,5 @@ void scroll_load_pending_col(void) NONBANKED {
     pending_h_i -= height;
 
     SWITCH_ROM(_save_bank);
-	
+
 }

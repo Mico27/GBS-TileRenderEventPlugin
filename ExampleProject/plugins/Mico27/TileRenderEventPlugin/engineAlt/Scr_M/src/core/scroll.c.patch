@@ -62,8 +62,8 @@ Index: src\core\scroll.c
              // If column differs by more than 1 render entire viewport
              scroll_render_rows(shift_scroll_x, 0, port->start_tile, port->tile_height);
 +            scroll_callback_execute(2);
-         }  
-         return FALSE;   
+         }
+         return FALSE;
      } else {
          // last parallax slice OR no parallax
 @@ -171,11 +202,13 @@
@@ -94,3 +94,23 @@ Index: src\core\scroll.c
  
          return TRUE;
      }
+@@ -242,8 +277,9 @@
+     while (pending_w_i) {
+         // If previous row wasn't fully rendered
+         // render it now before starting next row
+         scroll_load_pending_row();
++        scroll_callback_execute(1);
+     }
+ 
+     if (scroll_render_disabled) return;
+ 
+@@ -262,8 +298,9 @@
+     while (pending_h_i) {
+         // If previous column wasn't fully rendered
+         // render it now before starting next column
+         scroll_load_pending_col();
++        scroll_callback_execute(0);
+     }
+ 
+     if (scroll_render_disabled) return;
+ 
