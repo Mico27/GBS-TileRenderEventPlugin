@@ -273,9 +273,7 @@ void scroll_load_pending_row(void) NONBANKED {
 #ifdef CGB
     if (_is_CGB) {  // Color Row Load
         SWITCH_ROM(image_attr_bank);
-        VBK_REG = 1;
-        set_bkg_submap(pending_w_x, pending_w_y, width, 1, image_attr_ptr, image_tile_width);
-        VBK_REG = 0;
+        set_bkg_submap_attributes(pending_w_x, pending_w_y, width, 1, image_attr_ptr, image_tile_width);
     }
 #endif
     // DMG Row Load
@@ -294,10 +292,8 @@ void scroll_load_row(UBYTE x, UBYTE y) NONBANKED {
 
 #ifdef CGB
     if (_is_CGB) {  // Color Column Load
-        VBK_REG = 1;
         SWITCH_ROM(image_attr_bank);
-        set_bkg_submap(x, y, SCREEN_TILE_REFRES_W, 1, image_attr_ptr, image_tile_width);
-        VBK_REG = 0;
+        set_bkg_submap_attributes(x, y, SCREEN_TILE_REFRES_W, 1, image_attr_ptr, image_tile_width);
     }
 #endif
     // DMG Row Load
@@ -313,9 +309,7 @@ void scroll_load_col(UBYTE x, UBYTE y, UBYTE height) NONBANKED {
 #ifdef CGB
     if (_is_CGB) {  // Color Column Load
         SWITCH_ROM(image_attr_bank);
-        VBK_REG = 1;
-        set_bkg_submap(x, y, 1, height, image_attr_ptr, image_tile_width);
-        VBK_REG = 0;
+        set_bkg_submap_attributes(x, y, 1, height, image_attr_ptr, image_tile_width);
     }
 #endif
     // DMG Column Load
@@ -332,9 +326,7 @@ void scroll_load_pending_col(void) NONBANKED {
 #ifdef CGB
     if (_is_CGB) {  // Color Column Load
         SWITCH_ROM(image_attr_bank);
-        VBK_REG = 1;
-        set_bkg_submap(pending_h_x, pending_h_y, 1, height, image_attr_ptr, image_tile_width);
-        VBK_REG = 0;
+        set_bkg_submap_attributes(pending_h_x, pending_h_y, 1, height, image_attr_ptr, image_tile_width);
     }
 #endif
     // DMG Column Load
