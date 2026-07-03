@@ -22,6 +22,7 @@ https://github.com/user-attachments/assets/860d4490-b892-48a9-9bfb-fa75fca2777a
 4. [Technicalities and Restrictions](#technicalities-and-restrictions)
 5. [Events Reference](#events-reference)
 6. [Inner Workings](#inner-workings)
+7. [Memory Footprint](#memory-footprint)
 
 ---
 
@@ -194,3 +195,18 @@ The `scroll_viewport` function is the heart of the scroll update loop. After eve
 | Multi-row jump (main layer) | `scroll_render_rows` | 2 (all) |
 
 The "Render all" callback is deliberately called only once per `scroll_render_rows` invocation (at the end of the branching logic that detected a multi-tile jump), not once per row written inside the function. This keeps the overhead proportional to scroll events rather than to screen size.
+
+---
+
+## Memory Footprint
+
+Measured against the stock GB Studio **4.3.0-e1** engine (per-file SDCC compile with GB Studio's build flags, default engine settings). Values are the plugin's *delta* versus the stock engine; DMG build, with CGB noted where it differs. ROM cost lands in banked ROM (GB Studio's autobanker spreads it across switchable banks); using the plugin's events additionally compiles a few bytes of GBVM script per call into your project's script banks.
+
+| | Cost |
+|---|---|
+| WRAM | +15 bytes |
+| ROM | +302 bytes |
+
+- **WRAM:** 15 bytes of tile-render callback state added to `scroll.c`.
+- **Engine WRAM headroom:** the stock GB Studio 4.3.0 engine leaves about **854 bytes** of WRAM free (usable engine WRAM is 7,776 bytes at 0xC0A0–0xDF00; the stock engine uses 6,922 bytes). With this plugin installed roughly **839 bytes** remain. This figure does not depend on how many global variables your project defines: the script memory array has a fixed size of VM_HEAP_SIZE + (VM_MAX_CONTEXTS × VM_CONTEXT_STACK_SIZE) words — 768 + 16 × 64 = 1,792 words (3,584 bytes) with stock engine settings.
+- **SRAM:** not used.
