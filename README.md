@@ -19,6 +19,8 @@ https://github.com/user-attachments/assets/860d4490-b892-48a9-9bfb-fa75fca2777a
 3. [Size Limits and Restrictions](#size-limits-and-restrictions)
 4. [Events Reference](#events-reference)
 5. [Memory Footprint](#memory-footprint)
+6. [Bank 0 (HOME) Usage](#bank-0-home-usage)
+7. [Changelog](#changelog)
 
 ---
 
